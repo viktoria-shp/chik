@@ -35,6 +35,9 @@
     @include media-max-width ($screen-desktop) {
       padding: 16px 10px 24px;
     }
+    @include media($screen-iphone-5) {
+        max-width: 320px;
+  }
     @include media($screen-iphone-6) {
         max-width: 375px;
     }
