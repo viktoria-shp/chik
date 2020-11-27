@@ -55,7 +55,7 @@ $style: "animation";
     }
     &::before{  
         @include media($screen-iphone-5) {
-            bottom: -16px;
+            bottom: -20%;
         }
         @include media($screen-tablet-small) {
             bottom: -30px;
@@ -76,7 +76,7 @@ $style: "animation";
     }
     &::after{
         @include media($screen-iphone-5) {
-            top: -16px;
+            top: -20%;
         }
         @include media($screen-tablet-small) {
             top: -30px;
