@@ -9,11 +9,22 @@ $style: "slider";
     }
     .slick-list {
         padding: 0 !important;
-    }
+        overflow: visible;
+        .clearfix:before,
+        .clearfix:after {
+            content: ".";    
+            display: block;    
+            height: 0;    
+            overflow: hidden; 
+        }
+        .clearfix:after { clear: both; }
+        .clearfix { zoom: 1; }
+        }
     .slick-slide {
         display: flex;
         justify-content: start;
         align-items: center;
+        overflow: hidden;
         img {
             width: 100%;
             @include media-max-width($screen-tablet) {

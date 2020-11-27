@@ -17,8 +17,7 @@ $(function() {
     $('a[href=nav]').on('click', function(e) {
       e.preventDefault();
       $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-    });
-    
+});    
     $('.cta__btn','.popup__close').on('click', function(e) {
         $('body').addClass('popup-opened');
         $('.cta__btn').css('display:none')

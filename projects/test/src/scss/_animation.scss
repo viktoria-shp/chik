@@ -55,7 +55,7 @@ $style: "animation";
     }
     &::before{  
         @include media($screen-iphone-5) {
-            bottom: -20%;
+            bottom: -25%;
         }
         @include media($screen-tablet-small) {
             bottom: -30px;
@@ -66,17 +66,17 @@ $style: "animation";
             left: 60%;
         }
         @include media($screen-desktop) {
-            bottom: -45px;
+            bottom: -25%;
             left: 50%;
         }
         @include media($screen-fullhd) {
-            bottom: -67px;
+            bottom: -30%;
             left: 50%;
         }
     }
     &::after{
         @include media($screen-iphone-5) {
-            top: -20%;
+            top: -25%;
         }
         @include media($screen-tablet-small) {
             top: -30px;
@@ -87,11 +87,11 @@ $style: "animation";
             left: 60%;
         }
         @include media($screen-desktop) {
-            top: -45px;
+            top: -25%;
             left: 50%;
         }
         @include media($screen-fullhd) {
-            top: -67px;
+            top: -30%;
             left: 50%;
         }
     }
