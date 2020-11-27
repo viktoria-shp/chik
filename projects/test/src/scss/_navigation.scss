@@ -1,0 +1,300 @@
+$style: "navigation";
+.#{$style} {
+    @include flex(space-between, center);
+    width: 100%;
+    z-index: 3;
+    max-width: 100%;
+    margin-bottom: 51px;
+    &__links-start {
+        @include flex(flex-start);
+    }
+    &__links-end {
+        @include flex(flex-end);
+        @include media($screen-retina) {
+            @include flex(flex-end);
+        }
+    }
+    &__link {
+        cursor: pointer;
+        border: 1px solid $boredr-color;
+        width: 64px;
+        height: 63px;
+        text-align: center;
+        @include flex(center, center);
+    }
+    &__link:first-child {
+        border-right: 0;
+    }
+    &__link:hover {
+        transition: 0.3s;
+        border: 1px solid $main-hover_color;
+        path {
+            fill: $main-hover_color;
+        }
+    }    
+    &__link:nth-child(2) {
+        margin-right: 30px;
+        @include media($screen-fullhd) {
+            margin-right: 44px;
+        }
+        @include media($screen-retina) {
+            margin-right: 54px;
+        }        
+    }
+    &__lang,
+    &__lang-item {
+        font-family: $main-font;
+        font-size: $link-size;
+        color: $main-color;
+        margin-right: 20px;
+        text-decoration: none;
+        @include flex(flex-start, center);
+        @include media($screen-fullhd) {
+            margin-right: 15px;
+        }
+        @include media($screen-retina) {
+            margin-right: 20px;
+        }
+    }
+    &__lang:hover,
+    &__lang-item:hover {
+        transition: 0.3s;
+        color: $main-hover_color;
+    }
+    &__lang--active,
+    &__lang-item--active {
+        color: $active-color;
+    }
+    &__lang--active {}
+    &__list {
+        @include flex(space-between, center);
+        list-style: none;
+    }
+    &__list-item {
+        margin-right: 31px;
+        @include media($screen-fullhd) {
+            margin-right: 25px;
+        }
+        @include media($screen-retina) {
+            margin-right: 31px;
+        }
+    }
+    &__list-item:last-child {
+        margin-right: 54px;
+        @include media($screen-desktop) {
+            display: none;
+        }
+        @include media($screen-fullhd) {
+            margin-right: 34px;
+        }
+        @include media($screen-retina) {
+            margin-right: 54px;
+        }
+    }
+    &__list-link {
+        text-decoration: none;
+        color: $main-color;
+        font-family: $main-font;
+        font-size: $link-size;
+        position: relative;
+        @include media(screen-fullhd) {
+            font-size: $link-size_fullhd;
+        }
+        @include media(screen-retin) {
+            font-size: $link-size;
+        }
+    }
+    &__list-link:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        overflow: hidden;
+        width: 90%;
+        height: 10px;
+        background-color: #e0afbc;
+        opacity: .3;
+        transition: transform 275ms ease;
+    }
+    &__list-link:hover:after,
+    &__list-link--active:after {
+        transition: transform 275ms ease;
+        transform: scale(1.6, 2.1);
+        top: 33%;
+        right: 0;
+    } 
+    &__phone{
+        @include flex;
+    }
+    &__phone-number {
+        @include flex;
+        align-items: center;
+        color: $main-color;
+        font-family: $phone-font;
+        font-size: $link-size;
+        letter-spacing: 2.1px;
+        text-decoration: none;        
+        padding: 0 20px;
+        border: 1px solid $boredr-color;
+    }
+    &__link-phone {
+        border: 1px solid $boredr-color;
+        border-right: 0;
+        width: 64px;
+        height: 63px;
+        text-align: center;
+        @include flex(center, center);
+    }
+    &__phone:hover {
+        transition: 0.3s;
+        path {
+            fill: $main-hover_color;
+        }
+        .#{$style}__phone-number {
+            border: 1px solid $main-hover_color;
+        }
+        .#{$style}__link-phone {
+            border: 1px solid $main-hover_color;
+            border-right: 0;
+        }
+    }  
+    &__burger {
+        display: none;
+    }
+    &__burger div{
+        width: 18px;
+        height: 1px;
+        background: $main-color;
+        margin: 3px;
+        transition: all 0.3s ease;        
+    }
+    &__lang-item {
+        display: none;
+    }
+    &__lang-item--active {
+        display: none;
+    }
+    @include media-max-width ($screen-desktop) {
+        .#{$style}{
+            position: fixed;
+            z-index: 3;
+        }
+        &__lang {
+            display: none;
+        }
+        &__lang-item {
+            display: block;
+        }
+        &__lang-item:last-child {
+            margin: 0;
+        }
+        &__lang-container {
+            @include flex(space-around);
+            z-index: 3;
+        }
+        &__link {
+            height: 48px;
+            width: 48px;
+            z-index: 1;
+        }
+        &__link-phone {
+            height: 48px;
+            width: 48px;
+            z-index: 1;
+        }
+        &__img {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        &__phone {
+            order: 2;
+        }
+        &__phone-number {
+            display: none;
+        }
+        &__burger {
+            display:flex;
+            flex-direction: column;
+            order: 2;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.7s ease;
+            border: 1px solid $boredr-color;
+            height: 48px;
+            width: 48px;
+            justify-content: center;
+            align-items: center;
+        }
+        &__list {
+            position: fixed;
+            background: $white;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            clip-path: circle(29px at 90% -20%);
+            -webkit-clip-path: circle(29px at 90% -10%);
+            transition: all 1s ease-out;
+            pointer-events: none;
+            padding: 16px 0 50px;
+            @include media-max-width ($screen-tablet-small) {
+                padding: 50px 0 50px;
+            }
+        }
+        &__list.open{
+            clip-path: circle(1000px at 100%);
+            -webkit-clip-path: circle(1000px at 90% -10%);
+            pointer-events: all;
+        }
+        &__list li{
+            opacity: 0;
+            margin: 0;
+        }
+        &__list li:nth-child(1){
+            transition: all 0.5s ease 0.2s;
+        }
+        &__list li:nth-child(2){
+            transition: all 0.5s ease 0.4s;
+        }
+        &__list li:nth-child(3){
+            transition: all 0.5s ease 0.6s;
+        }
+        &__list li:nth-child(4){
+            transition: all 0.5s ease 0.7s;
+        }
+        &__list li:nth-child(5){
+            transition: all 0.5s ease 0.8s;
+        }
+        &__list li:nth-child(6){
+            transition: all 0.5s ease 0.9s;
+        }
+        &__list li:nth-child(7){
+            transition: all 0.5s ease 1s;
+            margin: 0;
+        }
+        &__list li:nth-child(8){
+            transition: all 0.5s ease 1s;
+            margin: 0;
+        }
+        li.fade{
+            opacity: 1;
+        }
+    }    
+    .#{$style}__burger.toggle {
+        background-color:  rgba(224,175,188, 0.1);
+        border: 1px solid $main-hover_color;
+        color: $main-color;
+    }
+    .toggle .#{$style}__burger-line1{
+        width: 28px;
+        transform: rotate(-45deg) translate(0px,5px);
+    }
+    .toggle .#{$style}__burger-line2{
+        transition: all 0.7s ease;
+        width:0;
+    }
+    .toggle .#{$style}__burger-line3{
+        width: 28px;
+        transform: rotate(45deg) translate(-5px,-9px);
+    }
+}

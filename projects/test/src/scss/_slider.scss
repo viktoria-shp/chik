@@ -1,0 +1,68 @@
+$style: "slider";
+.#{$style} {
+    width: 100%;
+    position: relative;
+    max-height: 667px;
+    margin-bottom: 28px;
+    @include media($screen-iphone-5) {
+        min-height: 320px;
+    }
+    .slick-list {
+        padding: 0 !important;
+    }
+    .slick-slide {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        img {
+            width: 100%;
+            @include media-max-width($screen-tablet) {
+                max-width: initial;
+                width: initial;
+            }
+        }
+    }
+    .slick-dots{
+        @include flex(center);
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media-max-width($screen-iphone-5) {
+            bottom: -20px;
+        }
+        li {
+            margin-right: 8px;
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+        li {
+            width: 18px;
+            height: 18px;
+            background-color: rgba(224, 175, 188, 0.2);
+            border: 0;
+            border-radius: 50%;
+        }
+        li.slick-active {
+            width: 18px;
+            height: 18px;
+            background-color: rgba(224, 175, 188, 0.6);
+            border-radius: 50%;
+            position: relative;
+        }
+        li.slick-active::before {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            background-color: rgba(224, 175, 188, 0.9);
+            border-radius: 50%;
+            top: 3px;
+            left: 20%;
+        }
+        button {
+            display: none;
+        }
+    }
+}

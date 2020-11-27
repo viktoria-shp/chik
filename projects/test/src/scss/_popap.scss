@@ -1,0 +1,140 @@
+$style: "popup";
+.#{$style} {
+    padding: 72px 71px 48px 71px;
+    background: #fff;
+    position: relative;
+    transition: all 5s ease-in-out;
+    text-align: center;
+    max-width: 502px;
+    z-index: 2;
+    @include media-max-width ($screen-tablet-small) {
+        padding: 10px;
+        max-width: 300px;
+    }
+    &__title {
+        font-family: $main-font;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 48px;
+        @include media-max-width ($screen-tablet-small) {
+            font-size: $link-size;
+            margin-bottom: 15px;
+        }
+    }
+    &__content {
+        max-height: 30%;
+        overflow: auto;
+    }
+    &__form {
+        position: relative;
+    }
+    &__inp {
+        border: 1px solid $main-hover_color;
+        font-family: $main-font;
+        font-size: $btn-size;
+        color: $btn-color;
+        padding: 10px 14px 10px 14px;
+        min-width: 360px;
+        width: 100%;
+        @include media-max-width ($screen-tablet-small) {
+            font-size: $scroll-size;
+            color: $btn-color;
+            padding: 7px 10px ;
+            min-width: 150px;
+        }
+    }
+    &__inp:focus {
+        outline: none;
+        border: 1px solid $btn-color;
+    }
+    &__inp--m2 {
+        margin-bottom: 20px;
+        @include media-max-width ($screen-tablet-small) {
+            margin-bottom: 20px;
+        }
+    }
+    &__inp--m7 {
+        margin-bottom: 72px;
+        @include media-max-width ($screen-tablet-small) {
+            margin-bottom: 40px;
+        }
+    }
+    &__btn {
+        font-family: $main-font;
+        font-size: $btn-size;
+        color: $white;
+        background-color: $main-hover_color;
+        padding: 21px 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        border: none;
+        cursor: pointer;
+        @include media-max-width ($screen-tablet-small) {
+            font-size: $link-size;
+            padding: 8px 20px;
+        }
+    }
+    &__btn:hover {
+        color: $main-color;
+    }
+    &__btn:active {
+        border: 1px solid $main-color;
+    }
+    &__btn::before {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 1px;
+        left: 45%;
+        top: 60%;
+        background: $main-hover_color;
+        transform: rotate(-90deg);
+        @include media-max-width ($screen-tablet-small) {
+            width: 25px;
+            height: 1px;
+            left: 45%;
+            top: 65%;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: -50px;
+        transition: all 200ms;
+        @include media-max-width ($screen-tablet-small) {
+            top: -40px;
+            left: 50%;
+            right: initial;
+            transform: translateX(-50%);
+        }
+    }
+    &-opened {
+        .navigation {
+            background-color: transparent;
+        }
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #EFD7DD;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }

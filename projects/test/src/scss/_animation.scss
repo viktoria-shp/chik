@@ -1,0 +1,436 @@
+
+$style: "animation";
+.#{$style} {
+    @include flex(center, center);
+    &__container {
+        @include flex(center, center);
+        width: 550px;
+        height: 550px;
+        position: absolute;
+        @include media($screen-iphone-5) {
+            margin-left: 50px;
+            width: 270px;
+            height: 270px;
+        }
+        @include media($screen-tablet-small) {
+            margin-left: 50px;
+            width: 320px;
+            height: 320px;
+        }
+        @include media($screen-desktop) {
+            margin-left: 50px;
+            width: 350px;
+            height: 350px;
+        }
+        @include media($screen-fullhd) {
+            margin-left: 109px;
+            width: 450px;
+            height: 450px;
+        }
+    &::before,
+    &::after {
+        content: '';
+        width: 2px;
+        height: 205px;
+        background-color: $main-hover_color;
+        position: absolute;
+        z-index: 10;
+        overflow: visible;
+        @include media($screen-iphone-5) {
+            width: 1px;
+            height: 80px;
+        }
+        @include media($screen-tablet-small) {
+            width: 1px;
+            height: 110px;
+        }
+        @include media($screen-desktop) {
+            width: 1px;
+            height: 150px;
+        }
+        @include media($screen-fullhd) {
+            width: 2px;
+            height: 205px;
+        }
+    }
+    &::before{  
+        @include media($screen-iphone-5) {
+            bottom: -16px;
+        }
+        @include media($screen-tablet-small) {
+            bottom: -30px;
+            left: 50%;
+        }
+        @media (min-width:600px) and (max-width:767px) {
+            bottom: -30px;
+            left: 60%;
+        }
+        @include media($screen-desktop) {
+            bottom: -45px;
+            left: 50%;
+        }
+        @include media($screen-fullhd) {
+            bottom: -67px;
+            left: 50%;
+        }
+    }
+    &::after{
+        @include media($screen-iphone-5) {
+            top: -16px;
+        }
+        @include media($screen-tablet-small) {
+            top: -30px;
+            left: 50%;
+        }
+        @media (min-width:600px) and (max-width:767px) {
+            top: -30px;
+            left: 60%;
+        }
+        @include media($screen-desktop) {
+            top: -45px;
+            left: 50%;
+        }
+        @include media($screen-fullhd) {
+            top: -67px;
+            left: 50%;
+        }
+    }
+    }
+    &__logo {
+        width: 390px;
+        height: 390px;
+        @include media($screen-iphone-5) {
+            width: 150px;
+            height: 150px;
+        }
+        @include media($screen-tablet-small) {
+            width: 200px;
+            height: 200px;
+        }
+        @include media($screen-desktop) {
+            width: 250px;
+            height: 250px;
+        }
+        @include media($screen-fullhd) {
+            width: 300px;
+            height: 300px;
+        }
+        @include media($screen-retina) {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    &__out {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 548px;
+        height: 548px;
+        background-color:  rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        animation: rotate2 20s -1s linear infinite;
+        margin-left: 109px;
+        @include media($screen-iphone-5) {
+            width: 270px;
+            height: 270px;
+        }
+        @include media($screen-tablet-small) {
+            margin-left: 50px;
+            width: 320px;
+            height: 320px;
+        }
+        @include media($screen-desktop) {
+            margin-left: 50px;
+            width: 380px;
+            height: 380px;
+        }
+        @include media($screen-fullhd) {
+            margin-left: 70px;
+            width: 450px;
+            height: 450px;
+        }
+        @include media($screen-retina) {
+            margin-left: 90px;
+            width: 550px;
+            height: 550px;
+            top: -50px;
+        }
+    }
+    &__out:before,
+    &__out:after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+        background-color:  rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        animation: rotate2 20s -1s linear infinite;
+    }
+    &__out:before {
+        width: 528px;
+        height: 528px;
+        @include media($screen-iphone-5) {
+            width: 260px;
+            height: 260px;
+        }
+        @include media($screen-tablet-small) {
+            margin-left: 50px;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            left: -10%;
+        }
+        @include media($screen-desktop) {
+            width: 360px;
+            height: 360px;
+        }
+        @include media($screen-fullhd) {
+            margin-left: 45px;
+            width: 440px;
+            height: 440px;
+        }
+        @include media($screen-retina) {
+            margin-left: 50px;
+            width: 535px;
+            height: 535px;
+        }
+    }
+    &__out:after {
+        width: 528px;
+        height: 528px;
+        @include media($screen-iphone-5) {
+            width: 240px;
+            height: 240px;
+        }
+        @include media($screen-tablet-small) {
+            margin-left: 50px;
+            width: 280px;
+            height: 280px;
+            top: 0;
+            left: -10%;
+        }
+        @include media($screen-desktop) {
+            width: 340px;
+            height: 340px;
+        }
+        @include media($screen-fullhd) {
+            margin-left: 45px;
+            width: 425px;
+            height: 425px;
+        }
+        @include media($screen-retina) {
+            margin-left: 90px;
+            width: 510px;
+            height: 510px;
+        }
+    }
+    &__in {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        border-radius: 50%;
+        animation: rotate1 20s -1s linear infinite;
+        margin-left: 0;
+        width: 390px;
+        height: 390px;
+        border: 1px solid $main-hover_color;
+        border-radius: 50%;
+        @include media($screen-iphone-5) {
+            width: 170px;
+            height: 170px;
+            top: 15%;
+            right: 20%;
+        }
+        @include media($screen-tablet-small) {
+            width: 220px;
+            height: 220px;
+            top: 10%;
+            right: 15%;
+        }
+        @include media($screen-desktop) {
+            width: 270px;
+            height: 270px;
+            top: 10%;
+            right: 10%;
+        }
+        @include media($screen-fullhd) {
+            width: 350px;
+            height: 350px;
+            top: 10%;
+            right: 8%;
+        }
+        @include media($screen-retina) {
+            width: 400px;
+            height: 400px;
+            top: 0;
+            right: 10%;
+        }
+    }
+    &__in:before,
+    &__in:after {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+        animation: rotate2 20s -1s linear infinite;
+        border: 2px solid $main-hover_color;
+    }
+    &__in:before {
+        width: 370px;
+        height: 370px;
+        @include media($screen-iphone-5) {
+            width: 160px;
+            height: 160px;
+            top: 5%;
+            right: 13%;
+        }
+        @include media($screen-tablet-small) {
+            width: 210px;
+            height: 210px;
+            top: 5%;
+            right: 17%;
+        }
+        @include media($screen-desktop) {
+            width: 255px;
+            height: 255px;
+            top: 0;
+        }
+        @include media($screen-fullhd) {
+            width: 345px;
+            height: 345px;
+            top: 0;
+        }
+        @include media($screen-retina) {
+            width: 380px;
+            height: 380px;
+        }
+    }
+    &__in:after {
+        width: 528px;
+        height: 528px;
+        @include media($screen-iphone-5) {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            right: 13%;
+        }
+        @include media($screen-tablet-small) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            right: 10%;
+        }
+        @include media($screen-desktop) {
+            width: 245px;
+            height: 245px;
+            top: 0%;
+        }
+        @include media($screen-fullhd) {
+            width: 325px;
+            height: 325px;
+        }
+        @include media($screen-retina) {
+            width: 360px;
+            height: 360px;
+        }
+    }
+    &__in--btn {
+        width: 55px;
+        height: 55px;
+        border: 1px solid $white;
+        top: -10px;
+        left: -10px;
+        @include media($screen-iphone-5) {
+            width: 30px;
+            height: 30px;
+            top: -2px;
+            left: -2px;
+        }
+        @include media ($screen-tablet-small) {
+            width: 35px;
+            height: 35px;
+            top: -4px;
+            left: -4px;
+        }
+    }
+    &__in--btn:before {
+        width: 48px;
+        height: 48px;
+        border: 1px solid $white;
+        @include media($screen-iphone-5) {
+            width: 25px;
+            height: 25px;
+        }
+        @include media-max-width ($screen-tablet-small) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &__in--btn:after {
+        width: 40px;
+        height: 40px;
+        border: 1px solid $white;
+        @include media($screen-iphone-5) {
+            width: 20px;
+            height: 20px;
+        }
+        @include media-max-width ($screen-tablet-small) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    &--btn:hover {
+        path {
+            fill: #E0AFBC;
+        }
+    }
+    &--btn {
+        width: auto;
+        height: auto;
+        top: -10px;
+        left: 0;
+        &::before,
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+        }
+        @include media-max-width ($screen-tablet-small) {
+            top: -10px;
+            left: -10px;
+        }
+    }
+    
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateZ(0deg) scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: rotateZ(180deg) scaleX(0.75) scaleY(0.90);
+    }
+    100% {
+        transform: rotateZ(360deg) scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateZ(0deg) scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: rotateZ(-180deg) scaleX(0.90) scaleY(0.75);
+    }
+    100% {
+        transform: rotateZ(-360deg) scaleX(1) scaleY(1);
+    }
+}
