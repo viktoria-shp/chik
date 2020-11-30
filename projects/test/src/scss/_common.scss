@@ -32,6 +32,12 @@
     @include flex(center);
     flex-wrap: wrap;    
     padding: 25px 0 90px;
+    &--slider {
+      overflow: hidden;
+      padding-top: 50px!important;
+      padding-right: 0!important;
+      padding-left: 0!important;
+    }
     @include media-max-width ($screen-desktop) {
       padding: 16px 10px 24px;
     }
