@@ -254,7 +254,13 @@ $style: "navigation";
       background-repeat: no-repeat;
       background-color: $white;
       background-position: center;
-      background-size: 80%;
+      background-size: 70%;
+      max-height: 100%;
+      @include media($screen-iphone-plus) {
+        background-position-x: center;
+        background-position-y: 45%;
+        background-size: 60%;
+      }
       @include media($screen-tablet-small) {
         background-position-x: center;
         background-position-y: 30%;
