@@ -244,6 +244,9 @@ $style: "navigation";
       left: 0;
       @include media-max-width($screen-desktop) {
         padding: 94px 0 85px;
+        left: 0;
+        top: 0;
+        overflow: auto;
       }
     }
     &__list.open {
